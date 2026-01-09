@@ -1,0 +1,129 @@
+.insights {
+  padding: 100px 90px;
+  background: #fbf6ef;
+}
+.insights-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.insights-header h2 {
+  font-size: 36px;
+  font-weight: 500;
+  color: #2b2b2b;
+}
+
+.dark-btn {
+  background: #2b2b2b;
+  color: #ffffff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 24px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.tag {
+  font-size: 13px;
+  font-weight: 600;
+  color: #2b2b2b;
+  display: inline-block;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 14px;
+}
+
+.tag::before {
+  content: "";
+  width: 4px;
+  height: 100%;
+  background: #f36a10;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.featured-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 32px;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+  position: relative;
+}
+
+.featured-card h3 {
+  font-size: 28px;
+  margin: 10px 0 12px;
+  max-width: 700px;
+}
+
+.featured-card p {
+  font-size: 15px;
+  color: #4a4a4a;
+  max-width: 650px;
+}
+
+.featured-card .arrow {
+  position: absolute;
+  bottom: 24px;
+  left: 32px;
+  font-size: 22px;
+  color: #0057b8;
+}
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.insight-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  position: relative;
+}
+
+.insight-card h4 {
+  font-size: 18px;
+  margin: 10px 0 10px;
+}
+
+.insight-card p {
+  font-size: 14px;
+  color: #4a4a4a;
+}
+
+.insight-card .arrow {
+  position: absolute;
+  bottom: 20px;
+  left: 24px;
+  font-size: 20px;
+  color: #0057b8;
+}
+@media (max-width: 1024px) {
+  .insights {
+    padding: 80px 40px;
+  }
+
+  .insights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .insights-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .insights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-card h3 {
+    font-size: 22px;
+  }
+}
